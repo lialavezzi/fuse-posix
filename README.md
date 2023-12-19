@@ -44,7 +44,7 @@ $ sudo apt-get install cmake git g++ libfuse-dev libcurl4-gnutls-dev
 **CentOS (yum)**
 
 ```BASH
-$ yum install -y cmake3 libcurl-devel libfuse-devel
+$ yum install -y cmake3 libcurl-devel fuse-devel
 ```
 
 ### Build the software
