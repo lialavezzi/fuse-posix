@@ -8,6 +8,28 @@ This tool is intended as an **alpha** version unless explicitly said and has to 
 
 Please note that the first target is to get a **read-only file system**.
 
+## Command to Run It
+
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
+
+```
+export RUCIOFS_SETTINGS_FILES_ROOT=/work/rucio/ruciofs_setup/non_containerized/fuse-posix/config
+./cmake-build-debug/bin/rucio-fuse-main &
+```
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
+:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
+
+
+
 ## Access pattern
 The Rucio file catalog is much flatter than that of a usual `POSIX` filesystems and as such its representation has to be structured according to that:
 
