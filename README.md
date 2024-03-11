@@ -13,17 +13,12 @@ Please note that the first target is to get a **read-only file system**.
 :red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	
 :red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
 :red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
-:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	
-:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
-:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
+
 
 ```
 export RUCIOFS_SETTINGS_FILES_ROOT=/work/rucio/ruciofs_setup/non_containerized/fuse-posix/config
 ./cmake-build-debug/bin/rucio-fuse-main &
 ```
-:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	
-:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
-:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
 :red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	
 :red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
 :red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:	:red_circle:
