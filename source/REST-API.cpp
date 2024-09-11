@@ -197,6 +197,8 @@ const std::vector<std::string>& rucio_list_servers(){
 
 std::vector<std::string> rucio_list_scopes(const std::string& short_server_name){
   auto found = scopes_cache.find(short_server_name);
+  if(NO_CACHE) found = scopes_cache.end();
+
   if(found == scopes_cache.end()) {
     auto conn_params = get_server_params(short_server_name);
     auto token_info = get_server_token(short_server_name);
@@ -261,6 +263,8 @@ std::vector<rucio_did> rucio_list_dids(const std::string& scope, const std::stri
   auto conn_params = get_server_params(short_server_name);
   auto key = short_server_name+scope;
   auto found = dids_cache.find(key);
+  if(NO_CACHE) found = dids_cache.end();
+
   if(found == dids_cache.end()) {
     auto headers = get_auth_headers(short_server_name);
 
@@ -300,6 +304,8 @@ std::vector<rucio_did> rucio_list_container_dids(const std::string& scope, const
   auto conn_params = get_server_params(short_server_name);
   auto key = short_server_name+scope+container_name;
   auto found = container_dids_cache.find(key);
+  if(NO_CACHE) found = container_dids_cache.end();
+
   if(found == container_dids_cache.end()) {
 
     auto headers = get_auth_headers(short_server_name);
@@ -352,6 +358,7 @@ bool rucio_is_container(const std::string& path){
   auto scope = extract_scope(path);
   auto name = extract_name(path);
   auto found = is_container_cache.find(short_server_name+scope+name);
+  if(NO_CACHE) found = is_container_cache.end();
 
   if(found == is_container_cache.end()) {
     auto headers = get_auth_headers(short_server_name);
@@ -389,8 +396,9 @@ bool rucio_is_file(const std::string& path){
   auto scope = extract_scope(path);
   auto name = extract_name(path);
   auto found = is_file_cache.find(short_server_name+scope+name);
+  if(NO_CACHE) found = is_file_cache.end();
 
-  if(found == is_container_cache.end()) {
+  if(found == is_container_cache.end()) {                    // <<<<<<<<<<<<< non e' sbagliato? CHECK
     auto headers = get_auth_headers(short_server_name);
 
     if (not headers) {
@@ -426,6 +434,7 @@ off_t rucio_get_size(const std::string& path){
   auto key = short_server_name+scope+name;
 
   auto cache_found = file_size_cache.find(key);
+  if(NO_CACHE) cache_found = file_size_cache.end();
 
   if(cache_found != file_size_cache.end()){
     return cache_found->second;
